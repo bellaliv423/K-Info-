@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>App Settings - K-Info</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227f",
+                        "gold": "#D4AF37",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121320",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24 }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-full min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden max-w-md mx-auto shadow-2xl">
+<!-- Header -->
+<div class="flex items-center bg-primary p-4 pb-4 justify-between sticky top-0 z-10 shadow-md">
+<div class="text-white flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10 uppercase tracking-widest">Settings</h2>
+</div>
+<div class="flex flex-col gap-6 p-4">
+<!-- Language Section -->
+<section>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary dark:text-gold">language</span>
+<h3 class="text-primary dark:text-white text-md font-bold leading-tight tracking-tight uppercase">Language</h3>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-4 rounded-xl border border-solid border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1c1e2d] p-[15px] flex-row-reverse transition-all">
+<input class="h-5 w-5 border-2 border-gray-300 bg-transparent text-primary checked:border-primary checked:bg-primary focus:outline-none focus:ring-0 focus:ring-offset-0" name="language" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">English</p>
+</div>
+</label>
+<label class="flex items-center gap-4 rounded-xl border-2 border-solid border-primary bg-primary/5 dark:bg-primary/20 p-[15px] flex-row-reverse">
+<input checked="" class="h-5 w-5 border-2 border-primary bg-primary text-white focus:outline-none focus:ring-0 focus:ring-offset-0" name="language" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-primary dark:text-white text-sm font-bold leading-normal">Simplified Chinese</p>
+</div>
+</label>
+<label class="flex items-center gap-4 rounded-xl border border-solid border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1c1e2d] p-[15px] flex-row-reverse transition-all">
+<input class="h-5 w-5 border-2 border-gray-300 bg-transparent text-primary checked:border-primary checked:bg-primary focus:outline-none focus:ring-0 focus:ring-offset-0" name="language" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Traditional Chinese</p>
+</div>
+</label>
+</div>
+</section>
+<!-- Preferences Section -->
+<section>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary dark:text-gold">tune</span>
+<h3 class="text-primary dark:text-white text-md font-bold leading-tight tracking-tight uppercase">Preferences</h3>
+</div>
+<div class="bg-white dark:bg-[#1c1e2d] rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800">
+<!-- Push Notifications -->
+<div class="flex items-center gap-4 px-4 py-4 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-primary dark:text-gold flex items-center justify-center rounded-lg bg-primary/10 dark:bg-gold/10 shrink-0 size-10">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="text-gray-800 dark:text-white text-base font-medium leading-normal flex-1">Push Notifications</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-gray-200 dark:bg-gray-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Dark Mode -->
+<div class="flex items-center gap-4 px-4 py-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary dark:text-gold flex items-center justify-center rounded-lg bg-primary/10 dark:bg-gold/10 shrink-0 size-10">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<p class="text-gray-800 dark:text-white text-base font-medium leading-normal flex-1">Dark Mode</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-gray-200 dark:bg-gray-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary dark:text-gold">info</span>
+<h3 class="text-primary dark:text-white text-md font-bold leading-tight tracking-tight uppercase">About</h3>
+</div>
+<div class="bg-white dark:bg-[#1c1e2d] rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 flex flex-col">
+<button class="flex items-center gap-4 px-4 py-4 justify-between border-b border-gray-100 dark:border-gray-800 text-left active:bg-gray-50 dark:active:bg-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-primary dark:text-gold flex items-center justify-center rounded-lg bg-primary/10 dark:bg-gold/10 shrink-0 size-10">
+<span class="material-symbols-outlined">help</span>
+</div>
+<p class="text-gray-800 dark:text-white text-base font-medium leading-normal">About K-Info</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</button>
+<button class="flex items-center gap-4 px-4 py-4 justify-between border-b border-gray-100 dark:border-gray-800 text-left active:bg-gray-50 dark:active:bg-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-primary dark:text-gold flex items-center justify-center rounded-lg bg-primary/10 dark:bg-gold/10 shrink-0 size-10">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<p class="text-gray-800 dark:text-white text-base font-medium leading-normal">Privacy Policy</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</button>
+<button class="flex items-center gap-4 px-4 py-4 justify-between border-b border-gray-100 dark:border-gray-800 text-left active:bg-gray-50 dark:active:bg-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-primary dark:text-gold flex items-center justify-center rounded-lg bg-primary/10 dark:bg-gold/10 shrink-0 size-10">
+<span class="material-symbols-outlined">description</span>
+</div>
+<p class="text-gray-800 dark:text-white text-base font-medium leading-normal">Terms of Service</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</button>
+<div class="flex items-center gap-4 px-4 py-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary dark:text-gold flex items-center justify-center rounded-lg bg-primary/10 dark:bg-gold/10 shrink-0 size-10">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<p class="text-gray-800 dark:text-white text-base font-medium leading-normal">Version</p>
+</div>
+<span class="text-gray-400 text-sm font-medium px-2">v2.4.1</span>
+</div>
+</div>
+</section>
+<!-- Footer Logo/branding -->
+<div class="flex flex-col items-center justify-center mt-4 mb-8 opacity-40">
+<div class="bg-primary p-2 rounded-lg mb-2">
+<span class="material-symbols-outlined text-white text-3xl">castle</span>
+</div>
+<p class="text-xs font-bold text-primary dark:text-white uppercase tracking-[0.2em]">Premium K-Info App</p>
+</div>
+</div>
+<!-- Navigation Bar (iOS Style) -->
+<div class="mt-auto bg-white dark:bg-[#1c1e2d] border-t border-gray-200 dark:border-gray-800 px-6 py-3 flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Guides</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-[10px] font-medium">Community</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary dark:text-gold">
+<span class="material-symbols-outlined fill-[1]">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2bd0d",
+                        "navy": "#1e293b",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden max-w-[430px] mx-auto shadow-2xl">
+<!-- Header -->
+<header class="flex items-center bg-navy p-4 pb-4 justify-between sticky top-0 z-50 shadow-md">
+<div class="text-white flex size-10 shrink-0 items-center justify-center cursor-pointer rounded-full hover:bg-white/10" data-icon="ArrowLeft">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">TOPIK Test</h2>
+</header>
+<!-- Section 1: Upcoming Exam Schedule -->
+<section class="p-4">
+<h2 class="text-navy dark:text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] pb-4 pt-2">Upcoming Exam Schedule</h2>
+<div class="flex flex-col gap-4">
+<!-- Exam Card 1 -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex flex-[2_2_0px] flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Registration: Mar 12 - Mar 18</p>
+<p class="text-navy dark:text-white text-lg font-bold leading-tight">94th TOPIK</p>
+<p class="text-primary text-sm font-semibold leading-normal">Test Date: May 12, 2024</p>
+</div>
+<button class="flex min-w-[120px] max-w-fit cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-navy text-sm font-bold leading-normal transition-colors hover:bg-primary/90">
+<span>Register Now</span>
+</button>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-lg shrink-0" data-alt="Modern geometric icon representing 94th exam" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAmURw3bamN_qO7TFN_Vi32bWhEQBZnG8dhUB03FkVot1eCvsooh-6TKhxBoCe5I6IB-587qRACv4XhyY_xs5ZmMdqVN4u6Rf1cpZfktH3k149DpUCK9s8MxnJK7XRay4KmkW63um5FViFc5hS_3GxGCiZMwsLDzlh7k-m5ateV6ZXumIZYLZE7tXLGt7B8StTFesPT1G3tW8OUC8-0sy64D3mrs2RdOPx0dU6fvFHRUFRzK3q2lcec0A6AkxbMraVDDBVVnaZ4wym");'></div>
+</div>
+<!-- Exam Card 2 -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm border border-slate-100 dark:border-slate-700 opacity-90">
+<div class="flex flex-[2_2_0px] flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Registration: May 21 - May 27</p>
+<p class="text-navy dark:text-white text-lg font-bold leading-tight">95th TOPIK</p>
+<p class="text-primary text-sm font-semibold leading-normal">Test Date: July 14, 2024</p>
+</div>
+<button class="flex min-w-[120px] max-w-fit cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-navy text-sm font-bold leading-normal transition-colors hover:bg-primary/90">
+<span>Register Now</span>
+</button>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-lg shrink-0" data-alt="Modern geometric icon representing 95th exam" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqwfkDSoFq5XBxFa1JQukhr66QrsDLMKs9lt3BLJS6UORPoxF6drNaP8COhayqtWRlCfZo6KfyZbdiWozIcf7ukElDcFwcInbcStvCZ3iopaK9cLgwQZmEPT4AxZUJ2-vcPjNsLOpE1R54am-RGI3YiI8bFqlyIXBaSXY5SQWTShgRBEeAZyVpTd5Rg8OXdVWGv9VQ4Nr0y7QSmiWyLC3uTgbztOK4P1WqIYuPe25O3RFhYefkOEkXCeh0TWIdm16RQFigKEUStF_X");'></div>
+</div>
+</div>
+</section>
+<!-- Section 2: Study Resources -->
+<section class="p-4 bg-slate-50 dark:bg-slate-900/50">
+<h2 class="text-navy dark:text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] pb-4">Study Resources</h2>
+<div class="grid grid-cols-3 gap-3">
+<div class="flex flex-col items-center justify-center p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 text-center">
+<div class="size-12 rounded-full bg-navy/5 dark:bg-primary/10 flex items-center justify-center text-navy dark:text-primary mb-2">
+<span class="material-symbols-outlined text-2xl">description</span>
+</div>
+<span class="text-xs font-bold text-navy dark:text-slate-200">Past Papers</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 text-center">
+<div class="size-12 rounded-full bg-navy/5 dark:bg-primary/10 flex items-center justify-center text-navy dark:text-primary mb-2">
+<span class="material-symbols-outlined text-2xl">translate</span>
+</div>
+<span class="text-xs font-bold text-navy dark:text-slate-200">Vocabulary</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 text-center">
+<div class="size-12 rounded-full bg-navy/5 dark:bg-primary/10 flex items-center justify-center text-navy dark:text-primary mb-2">
+<span class="material-symbols-outlined text-2xl">history_edu</span>
+</div>
+<span class="text-xs font-bold text-navy dark:text-slate-200">Grammar</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Level Guide -->
+<section class="p-4 mb-8">
+<h2 class="text-navy dark:text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] pb-4">Level Guide</h2>
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+<table class="w-full text-left border-collapse">
+<thead class="bg-navy text-white text-sm">
+<tr>
+<th class="p-3 font-semibold">Test</th>
+<th class="p-3 font-semibold">Level</th>
+<th class="p-3 font-semibold">Score Requirement</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-slate-100 dark:divide-slate-700">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="p-3 font-bold text-navy dark:text-primary">TOPIK I</td>
+<td class="p-3 dark:text-slate-300">Level 1</td>
+<td class="p-3 dark:text-slate-300">80+ points</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="p-3 font-bold text-navy dark:text-primary">TOPIK I</td>
+<td class="p-3 dark:text-slate-300">Level 2</td>
+<td class="p-3 dark:text-slate-300">140+ points</td>
+</tr>
+<tr class="bg-slate-50 dark:bg-slate-900/40">
+<td class="p-2" colspan="3"></td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="p-3 font-bold text-navy dark:text-primary">TOPIK II</td>
+<td class="p-3 dark:text-slate-300">Level 3</td>
+<td class="p-3 dark:text-slate-300">120+ points</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="p-3 font-bold text-navy dark:text-primary">TOPIK II</td>
+<td class="p-3 dark:text-slate-300">Level 4</td>
+<td class="p-3 dark:text-slate-300">150+ points</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="p-3 font-bold text-navy dark:text-primary">TOPIK II</td>
+<td class="p-3 dark:text-slate-300">Level 5</td>
+<td class="p-3 dark:text-slate-300">190+ points</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="p-3 font-bold text-navy dark:text-primary">TOPIK II</td>
+<td class="p-3 dark:text-slate-300">Level 6</td>
+<td class="p-3 dark:text-slate-300">230+ points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Premium Support Tip -->
+<div class="mt-6 p-4 rounded-xl bg-primary/10 border border-primary/20 flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary">info</span>
+<div>
+<p class="text-sm font-bold text-navy dark:text-white">Pro Tip</p>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-1">TOPIK II includes a writing section. We recommend practicing with our exclusive Grammar Guides for Level 4+ aspirants.</p>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation Spacer -->
+<div class="h-20 bg-transparent"></div>
+</div>
+</body></html>

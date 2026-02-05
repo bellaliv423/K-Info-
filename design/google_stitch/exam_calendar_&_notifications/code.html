@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Exam Calendar &amp; Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1A237E", // Navy Blue
+                        "accent": "#D4AF37",  // Gold
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101022",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .calendar-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #D4AF37;
+            border-radius: 50%;
+            margin: 2px auto 0;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto overflow-x-hidden border-x border-slate-200 dark:border-slate-800 shadow-2xl">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-20 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-4 justify-between border-b border-slate-100 dark:border-slate-800">
+<div class="text-primary dark:text-slate-200 flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-primary dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Exam Calendar</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-transparent text-primary dark:text-slate-200">
+<span class="material-symbols-outlined">calendar_add_on</span>
+</button>
+</div>
+</div>
+<!-- Calendar Container -->
+<div class="bg-primary px-4 pt-6 pb-8 text-white rounded-b-[2rem] shadow-lg">
+<div class="flex items-center justify-between mb-6 px-2">
+<button class="p-2 hover:bg-white/10 rounded-full">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="text-center">
+<p class="text-xs uppercase tracking-widest opacity-80 font-medium">South Korea</p>
+<h3 class="text-xl font-bold">April 2024</h3>
+</div>
+<button class="p-2 hover:bg-white/10 rounded-full">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-y-2">
+<!-- Days of Week -->
+<div class="text-center text-[11px] font-bold opacity-60">SUN</div>
+<div class="text-center text-[11px] font-bold opacity-60">MON</div>
+<div class="text-center text-[11px] font-bold opacity-60">TUE</div>
+<div class="text-center text-[11px] font-bold opacity-60">WED</div>
+<div class="text-center text-[11px] font-bold opacity-60">THU</div>
+<div class="text-center text-[11px] font-bold opacity-60">FRI</div>
+<div class="text-center text-[11px] font-bold opacity-60">SAT</div>
+<!-- Calendar Dates -->
+<div class="h-10 flex items-center justify-center text-sm font-medium opacity-40">31</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">1</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">2</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">3</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">4</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">5</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">6</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">7</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">8</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">9</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">10</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">11</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">
+                12<div class="calendar-dot"></div>
+</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">13</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">14</div>
+<div class="h-10 relative flex flex-col items-center justify-center text-sm font-bold bg-accent text-primary rounded-xl">
+                15<div class="w-1 h-1 bg-primary/40 rounded-full mt-0.5"></div>
+</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">16</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">17</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">18</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">19</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">20</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">21</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">22</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">23</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">24</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">25</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">26</div>
+<div class="h-10 flex flex-col items-center justify-center text-sm font-medium">27</div>
+</div>
+</div>
+<!-- Upcoming Events List -->
+<div class="px-4 py-6 space-y-4 flex-1">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-primary dark:text-white text-lg font-bold tracking-tight">Upcoming Events</h3>
+<span class="text-accent text-xs font-bold uppercase tracking-wide">3 Alerts Active</span>
+</div>
+<!-- Event Card 1 -->
+<div class="ios-shadow bg-white dark:bg-slate-900 border-l-4 border-accent p-4 rounded-xl flex items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+<span class="material-symbols-outlined">app_registration</span>
+</div>
+<div class="flex flex-col">
+<p class="text-primary dark:text-slate-100 text-[15px] font-bold leading-tight">93rd TOPIK Registration</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-1">Starts: April 15, 2024</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[28px] w-[48px] cursor-pointer items-center rounded-full bg-accent p-0.5 justify-end">
+<div class="h-full w-[24px] rounded-full bg-white shadow-md"></div>
+<input checked="" class="hidden" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="ios-shadow bg-white dark:bg-slate-900 border-l-4 border-primary p-4 rounded-xl flex items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">quiz</span>
+</div>
+<div class="flex flex-col">
+<p class="text-primary dark:text-slate-100 text-[15px] font-bold leading-tight">KIIP Level Test</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-1">Test Date: May 12, 2024</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[28px] w-[48px] cursor-pointer items-center rounded-full bg-slate-200 dark:bg-slate-700 p-0.5">
+<div class="h-full w-[24px] rounded-full bg-white shadow-md"></div>
+<input class="hidden" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="ios-shadow bg-white dark:bg-slate-900 border-l-4 border-accent p-4 rounded-xl flex items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+<span class="material-symbols-outlined">notification_important</span>
+</div>
+<div class="flex flex-col">
+<p class="text-primary dark:text-slate-100 text-[15px] font-bold leading-tight">EPS-TOPIK Results</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-1">Announcement: April 28</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[28px] w-[48px] cursor-pointer items-center rounded-full bg-accent p-0.5 justify-end">
+<div class="h-full w-[24px] rounded-full bg-white shadow-md"></div>
+<input checked="" class="hidden" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="p-6 bg-background-light dark:bg-background-dark sticky bottom-0">
+<button class="w-full h-14 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-xl active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+            Set Custom Alert
+        </button>
+<!-- Home Indicator -->
+<div class="mt-6 flex justify-center">
+<div class="w-32 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+</div>
+</div>
+</body></html>

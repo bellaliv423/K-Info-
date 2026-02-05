@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News Feed Home - K-Info</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121320",
+                        "accent-gold": "#C5A059"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ios-status-bar {
+            height: 44px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto w-full max-w-[430px] mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl min-h-screen">
+<header class="sticky top-0 z-50 bg-primary text-white pt-2 pb-4 px-4 shadow-lg">
+<div class="ios-status-bar flex justify-between items-center text-xs px-2 mb-2">
+<span>9:41</span>
+<div class="flex gap-1 items-center">
+<span class="material-symbols-outlined text-sm">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-sm">wifi</span>
+<span class="material-symbols-outlined text-sm">battery_full</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 shrink-0 bg-white/20 rounded-full flex items-center justify-center overflow-hidden border border-white/30">
+<img class="w-full h-full object-cover" data-alt="User profile picture placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZMzhkb21vNMIMuKtjabf5mswbdyR2Yvznpbk15IJFqIkExUiPuKmzRZiyLirZm3KJVnMBYus3v1KuGDZoYifF9qSKyjeyMoRvSRg1Zj7ra_-c8arQPEJzg347fIecI3Mgs5xgdHHDR4GqrpDJSxJRycflSWpY6EVIMF9xhqaJEf2uWnpWNw-THsrXY3ifYD3H_0ySWvysuBNFJm0gtU0WTH6uwEmRdb3MzlewaiXRUch5JmP3Dw2KASzc-1EBR7sg3pO37XrN5kbK"/>
+</div>
+<h1 class="text-xl font-bold tracking-tight">K-Info</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-white/10 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border border-primary"></span>
+</button>
+<button class="p-2 hover:bg-white/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+</header>
+<nav class="flex gap-3 p-4 overflow-x-auto no-scrollbar bg-background-light dark:bg-background-dark sticky top-[108px] z-40">
+<div class="flex h-10 shrink-0 items-center justify-center rounded-xl bg-primary px-6 shadow-sm">
+<p class="text-white text-sm font-semibold">All</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-xl bg-white dark:bg-slate-800 px-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium">Economy</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-xl bg-white dark:bg-slate-800 px-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium">Entertainment</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-xl bg-white dark:bg-slate-800 px-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium">Society</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-xl bg-white dark:bg-slate-800 px-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium">Visa</p>
+</div>
+</nav>
+<main class="flex flex-col gap-4 p-4">
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-[0_8px_20px_-10px_rgba(26,34,127,0.15)] border border-slate-100 dark:border-slate-700">
+<div class="relative w-full aspect-video">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover" data-alt="Futuristic technology skyscrapers in Seoul city landscape" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxdwwQtOm7xAcXwZC1LjqKdpHomgwv_UxSs8nTOLhRiEYVT345cPBrXaCcSG8w3yIr1lEqmnf7fByJpACDSUindUDGc2XXxabCtSdi4-Mo0-tcJaQKIu0p1P_P7f2-EsUaOMnLErxtimefK-STbFTns283QBVhL8428BMB-Tf0BznH-GkfS-IvsBNxUxRY9gpdBirGa0lDJlw-VNkf_8lw6jxpuwV1Ufof_vxDmJ1xxv8gWN86Y5xHeKUMY1E19v_xypzL_rOSdXV5");'></div>
+<div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-accent-gold text-white text-xs font-bold uppercase tracking-wider shadow-md">
+                        Economy
+                    </div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight group-active:text-primary transition-colors">
+                        Latest economic trends in Seoul's tech hubs: What foreigners need to know
+                    </h3>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="font-semibold text-primary dark:text-primary/80">K-News</span>
+<span class="size-1 bg-slate-300 dark:bg-slate-600 rounded-full"></span>
+<span>2 hours ago</span>
+<div class="flex-1"></div>
+<button class="material-symbols-outlined text-slate-400">bookmark</button>
+</div>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-[0_8px_20px_-10px_rgba(26,34,127,0.15)] border border-slate-100 dark:border-slate-700">
+<div class="relative w-full aspect-video">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover" data-alt="Traditional Korean cultural festival performance with colorful lanterns" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3Us3S425m-IyQUGNiZ9RfGv-HPBc2T1YS0D16fkcpwMfleIEJHu8ry262KyG1m3UiP16HcefwKikY58W09xFbk1mUC-mbY7dCvF0xDF1vteuvym3WKxwiseIHV4XkP8mL8Hpmi_9Qw058GAbuqvsRIr7fCYJAsFeURjJX9Vj5nn-IcKh6MMdrXbSYIRXYcnv_M0HT1AUzS4lqsvULK-AflbIig-Vps59Fpn274LShq3o80WJ-U1KI2kPyOilzcbtn5Xru4B8y5gm6");'></div>
+<div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-accent-gold text-white text-xs font-bold uppercase tracking-wider shadow-md">
+                        Culture
+                    </div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight group-active:text-primary transition-colors">
+                        Major cultural festivals announced for the upcoming autumn season
+                    </h3>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="font-semibold text-primary dark:text-primary/80">Culture Daily</span>
+<span class="size-1 bg-slate-300 dark:bg-slate-600 rounded-full"></span>
+<span>4 hours ago</span>
+<div class="flex-1"></div>
+<button class="material-symbols-outlined text-slate-400">bookmark</button>
+</div>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-[0_8px_20px_-10px_rgba(26,34,127,0.15)] border border-slate-100 dark:border-slate-700">
+<div class="relative w-full aspect-video">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover" data-alt="Laptop and passport on a cafe table representing digital nomad lifestyle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrkhSoHFamMlGwQ6bqe5GDQQodRm10k1ukCD1bxJtqHoTzdcdLi3Wdqxy7Wf6wVyH5X9K4WABU71L2tAsZzoP5dj7NFj3zicy0EsDAuHx2xiLgZJgWCqFP2CMTr363P8fsXlPTkB4GxxlA0X8vUJx73iuC8ETk8BiAJkvtGrSKLGv302L1Q_rKgrNpBdEAwxwguE5NsK5I83FDNDGvVETNbxC5svc53rML5KLO_pxuOsxA630sbk16RLXBRAMfzbMHQan0OVoLYku6");'></div>
+<div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-accent-gold text-white text-xs font-bold uppercase tracking-wider shadow-md">
+                        Society
+                    </div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight group-active:text-primary transition-colors">
+                        New residency regulations for digital nomads in 2024: A complete guide
+                    </h3>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="font-semibold text-primary dark:text-primary/80">Global Korea</span>
+<span class="size-1 bg-slate-300 dark:bg-slate-600 rounded-full"></span>
+<span>6 hours ago</span>
+<div class="flex-1"></div>
+<button class="material-symbols-outlined text-slate-400">bookmark</button>
+</div>
+</div>
+</div>
+<div class="h-20"></div>
+</main>
+<nav class="fixed bottom-0 w-full max-w-[430px] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 flex justify-around items-center py-3 px-4 z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Services</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-[10px] font-medium">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>
